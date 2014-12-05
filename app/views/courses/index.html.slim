@@ -1,0 +1,21 @@
+.row
+  .col-md-12
+    = flash_messages if flash.present?
+
+    table.table.table-bordered.table-striped
+      thead
+        tr
+          th Estudante
+          th= t('views.show')
+          th= t('views.edit')
+          th= t('views.destroy')
+      tbody
+        - @courses.each do |course|
+          tr
+            td= course.name
+            td= link_to t('views.show'), course_path(course), class: 'btn btn-info'
+            td= link_to t('views.edit'), edit_course_path(course), class: 'btn btn-warning'
+            td= link_to t('views.destroy'), course_path(course), method: :delete, class: 'btn btn-danger'
+
+    .span.pull-left
+      = link_to t('.new'), new_course_path, class: 'btn btn-success'

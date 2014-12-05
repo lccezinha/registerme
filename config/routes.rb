@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :students
+  resources :courses
   get  'home/index' => 'home#index'
 
   root 'home#index'

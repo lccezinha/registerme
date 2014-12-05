@@ -10,6 +10,9 @@ pt-BR:
   students:
     index:
       new: Novo Estudante
+  courses:
+    index:
+      new: Novo Curso
   controllers:
     students:
       flash:
@@ -19,12 +22,26 @@ pt-BR:
           notice: 'Estudante criado com sucesso'
         destroy:
           notice: 'Estudante apagado com sucesso'
+    courses:
+      flash:
+        edit:
+          notice: Curso editado com sucesso
+        create:
+          notice: 'Curso criado com sucesso'
+        destroy:
+          notice: 'Curso apagado com sucesso'
   simple_form:
     labels:
       student:
         name: Nome
         register_number: Registro Acadêmico
+      course:
+        name: Nome
+        description: Descrição
     placeholders:
       student:
         name: Informe o nome
         register_number: Número do registro acadêmico ABC123123
+      course:
+        name: Nome
+        description: Descrição do Curso
