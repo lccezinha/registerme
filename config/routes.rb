@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :students
   resources :courses
+  resources :memberships, only: [:new, :create]
+
   get  'home/index' => 'home#index'
 
   root 'home#index'
