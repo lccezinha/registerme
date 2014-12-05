@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :membership do
-    student nil
-course nil
+    student_id 1
+    course_id 1
   end
-
 end
