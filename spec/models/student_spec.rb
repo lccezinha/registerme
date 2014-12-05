@@ -13,6 +13,9 @@ RSpec.describe Student, :type => :model do
     end
   end
 
-  context 'associations'
+  context 'associations' do
+    it { expect(subject).to have_many(:memberships) }
+    it { expect(subject).to have_many(:courses).through(:memberships) }
+  end
 
 end
