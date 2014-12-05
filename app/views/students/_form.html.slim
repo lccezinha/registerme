@@ -1,7 +1,11 @@
-= simple_form_for @student do |f|
-  .panel.panel-form
-    .panel-body
-      = f.input :name, label: t('simple_form.labels.student.name')
-      = f.input :register_number, placeholde: t('simple_form.placeholders.student.register_number'), label: t('simple_form.labels.student.register_number')
-    .panel-footer
-      = f.submit
+.container
+  .row
+    .col-md-9
+      .well
+        = simple_form_for @student, { class: 'form-horizontal' } do |f|
+          .form-group
+            = f.input :name, placeholder: t('simple_form.placeholders.student.name'), label: false
+          .form-group
+            = f.input :register_number, placeholder: t('simple_form.placeholders.student.register_number'), label: false
+          .panel-footer
+            = f.submit

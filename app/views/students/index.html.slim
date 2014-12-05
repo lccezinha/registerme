@@ -7,9 +7,9 @@
         tr
           th Estudante
           th Registro
-          th Exibir
-          th Editar
-          th Destuir
+          th= t('views.show')
+          th= t('views.edit')
+          th= t('views.destroy')
       tbody
         - @students.each do |student|
           tr

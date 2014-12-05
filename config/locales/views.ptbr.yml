@@ -26,4 +26,5 @@ pt-BR:
         register_number: Registro Acadêmico
     placeholders:
       student:
+        name: Informe o nome
         register_number: Número do registro acadêmico ABC123123
