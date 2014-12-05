@@ -66,6 +66,7 @@ RSpec.describe CoursesController, :type => :controller do
       end
 
       it 'render new template' do
+        post :create, course: course
         expect(response).to render_template('new')
       end
     end
@@ -123,13 +124,9 @@ RSpec.describe CoursesController, :type => :controller do
   context 'DELETE #destroy' do
     subject(:course) { create(:course) }
 
-    it 'delete' do
-      expect{ delete :destroy, { id: course } }.to change(Course, :count).by(-1)
-    end
-
-    it 'render index' do
+    it 'redirect_to courses_path' do
       delete :destroy, id: course.id
-      expect(response).to render_template('index')
+      expect(response).to redirect_to(courses_path)
     end
   end
 

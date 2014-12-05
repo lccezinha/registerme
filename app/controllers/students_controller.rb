@@ -22,7 +22,7 @@ class StudentsController < ApplicationController
       flash[:notice] = t('controllers.students.flash.create.notice')
       redirect_to students_path
     else
-      render action: :new
+      render :new
     end
   end
 
