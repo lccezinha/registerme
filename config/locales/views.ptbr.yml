@@ -1,4 +1,8 @@
 pt-BR:
+  views:
+    show: Exibir
+    edit: Editar
+    destroy: Destruir
   layouts:
     application:
       students: Listar Estudantes
