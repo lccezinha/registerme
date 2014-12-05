@@ -1,0 +1,14 @@
+pt-BR:
+  controllers:
+    students:
+      flash:
+        create:
+          notice: 'Estudante criado com sucesso'
+  simple_form:
+    labels:
+      student:
+        name: Nome
+        register_number: Registro Acadêmico
+    placeholders:
+      student:
+        register_number: Número do registro acadêmico ABC123123

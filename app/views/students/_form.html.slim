@@ -1,0 +1,7 @@
+= simple_form_for @student do |f|
+  .panel.panel-form
+    .panel-body
+      = f.input :name, label: t('simple_form.labels.student.name')
+      = f.input :register_number, placeholde: t('simple_form.placeholders.student.register_number'), label: t('simple_form.labels.student.register_number')
+    .panel-footer
+      = f.submit

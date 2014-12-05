@@ -1,1 +1,9 @@
-index.html.slim
+.row
+  .col-md-12
+    .span.pull-left
+      = link_to 'Novo Estudante', new_student_path
+
+    hr
+
+    - @students.each do |student|
+      = link_to student.name, student_path(student)

@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20141204225003) do
   create_table "students", force: true do |t|
     t.string   "name"
     t.string   "register_number"
-    t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
