@@ -1,11 +1,23 @@
 .row
   .col-md-12
     .span.pull-left
-      = link_to 'Novo Estudante', new_student_path
+      = link_to t('.new'), new_student_path, class: 'btn btn-success'
 
-    hr
+    = flash_messages if flash.present?
 
-    ul
-    - @students.each do |student|
-      li
-        = link_to student.name, student_path(student)
+    table.table.table-bordered.table-striped
+      thead
+        tr
+          th Estudante
+          th Registro
+          th Exibir
+          th Editar
+          th Destuir
+      tbody
+        - @students.each do |student|
+          tr
+            td= student.name
+            td= student.register_number
+            td= link_to 'Show', student_path(student), class: 'btn btn-info'
+            td= link_to 'Edit', edit_student_path(student), class: 'btn btn-warning'
+            td= link_to 'Destroy', student_path(student), method: :delete, class: 'btn btn-danger'

@@ -1,9 +1,20 @@
 pt-BR:
+  layouts:
+    application:
+      students: Listar Estudantes
+      courses: Listar Cursos
+  students:
+    index:
+      new: Novo Estudante
   controllers:
     students:
       flash:
+        edit:
+          notice: Estudante editado com sucesso
         create:
           notice: 'Estudante criado com sucesso'
+        destroy:
+          notice: 'Estudante apagado com sucesso'
   simple_form:
     labels:
       student:
