@@ -30,14 +30,6 @@ RSpec.describe StudentsController, :type => :controller do
       get :show, id: student.id
       expect(response).to render_template('show')
     end
-
-    context 'when user has memberships' do
-      subject(:student) { create(:student) }
-      let(:course) { create(:course) }
-      let(:membership) { create(:membership, student_id: student.id, course_id: course.id) }
-
-      it { expect(student.reload.courses).to include(course) }
-    end
   end
 
   context 'GET #new' do
