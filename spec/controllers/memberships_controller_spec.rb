@@ -14,16 +14,17 @@ RSpec.describe MembershipsController, :type => :controller do
   end
 
   context 'POST #create' do
-    subject(:membership) { attributes_for(:membership) }
+    let(:student) { create(:student) }
+    let(:course) { create(:course) }
 
     context 'when success' do
       it 'create new membership' do
-        expect { post :create, membership: membership }.to change(Membership, :count).by(1)
+        expect { post :create, membership: { student_id: student.id, course_id: course.id } }.to change(Membership, :count).by(1)
       end
 
       it 'redirect to root' do
-        post :create, membership: membership
-        expect(response).to redirect_to(root_path)
+        post :create, membership: { student_id: student.id, course_id: course.id }
+        expect(response).to redirect_to(student_path(student))
       end
     end
 

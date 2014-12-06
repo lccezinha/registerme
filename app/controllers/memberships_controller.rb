@@ -10,7 +10,7 @@ class MembershipsController < ApplicationController
 
     if @membership.save
       flash[:notice] = t('controllers.membership.flash.create.notice')
-      redirect_to root_path
+      redirect_to student_path(@membership.student)
     else
       render :new
     end
