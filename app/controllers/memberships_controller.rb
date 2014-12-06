@@ -1,4 +1,5 @@
 class MembershipsController < ApplicationController
+  before_action :load_resources, only: :new
 
   def new
     @membership = Membership.new
@@ -21,4 +22,8 @@ class MembershipsController < ApplicationController
     params.require(:membership).permit(:student_id, :course_id)
   end
 
+  def load_resources
+    @students = Student.all
+    @courses  = Course.all
+  end
 end

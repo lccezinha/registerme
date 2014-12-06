@@ -1,11 +1,12 @@
 class StudentsController < ApplicationController
-  before_action :load_student, only: [:edit, :show, :update, :destroy]
+  before_action :load_student, only: [:edit, :update]
 
   def index
     @students = Student.all
   end
 
   def show
+    @student = Student.includes(:courses).find params[:id]
   end
 
   def edit
@@ -36,6 +37,7 @@ class StudentsController < ApplicationController
   end
 
   def destroy
+    @student = Student.find params[:id]
     @student.destroy
     flash[:notice] = t('controllers.students.flash.destroy.notice')
     redirect_to students_path

@@ -1,6 +1,9 @@
 pt-BR:
   activerecord:
     models:
+      membership:
+        one: Matrícula
+        other: Matrículas
       student:
         one: Estudante
         other: Estudantes

@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  before_action :load_course, only: [:edit, :show, :update, :destroy]
+  before_action :load_course, only: [:edit, :show, :update]
 
   def index
     @courses = Course.all
@@ -36,6 +36,7 @@ class CoursesController < ApplicationController
   end
 
   def destroy
+    @course = Course.find params[:id]
     @course.destroy
     flash[:notice] = t('controllers.courses.flash.destroy.notice')
     redirect_to courses_path

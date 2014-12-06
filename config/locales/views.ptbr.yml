@@ -7,9 +7,13 @@ pt-BR:
     application:
       students: Listar Estudantes
       courses: Listar Cursos
+      memberships: Nova Matrícula
   students:
     index:
       new: Novo Estudante
+    courses:
+      student_memberships: Cursos Matrículados
+      empty: Não possui matrículas
   courses:
     index:
       new: Novo Curso
@@ -38,6 +42,9 @@ pt-BR:
       course:
         name: Nome
         description: Descrição
+      membership:
+        student_id: Estudante
+        course_id: Curso
     placeholders:
       student:
         name: Informe o nome
