@@ -32,7 +32,7 @@ class StudentsController < ApplicationController
       flash[:notice] = t('controllers.students.flash.edit.notice')
       redirect_to student_path(@student)
     else
-      render action: :edit
+      render :edit
     end
   end
 

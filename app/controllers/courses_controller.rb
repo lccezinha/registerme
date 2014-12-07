@@ -22,7 +22,7 @@ class CoursesController < ApplicationController
       flash[:notice] = t('controllers.courses.flash.create.notice')
       redirect_to courses_path
     else
-      render action: :new
+      render :new
     end
   end
 
@@ -31,7 +31,7 @@ class CoursesController < ApplicationController
       flash[:notice] = t('controllers.courses.flash.edit.notice')
       redirect_to course_path(@course)
     else
-      render action: :edit
+      render :edit
     end
   end
 
