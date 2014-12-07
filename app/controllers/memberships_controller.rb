@@ -16,6 +16,13 @@ class MembershipsController < ApplicationController
     end
   end
 
+  def avaliables
+    student     = Student.includes(:courses).find params[:id]
+    courses_ids = student.courses.pluck :id
+    avaliables  = Course.where.not id: courses_ids
+    render json: avaliables
+  end
+
   private
 
   def membership_params

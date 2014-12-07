@@ -3,9 +3,9 @@
     .col-md-9
       .well
         = simple_form_for @membership, { class: 'form-horizontal' } do |f|
-          .form-group
+          .form-group.students
             = f.association :student, label: t('simple_form.labels.membership.student_id')
-          .form-group
+          .form-group.courses
             = f.association :course, label: t('simple_form.labels.membership.course_id')
           .panel-footer
             = f.submit

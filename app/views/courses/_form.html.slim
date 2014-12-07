@@ -6,6 +6,6 @@
           .form-group
             = f.input :name, placeholder: t('simple_form.placeholders.course.name'), label: false
           .form-group
-            = f.input :description, placeholder: t('simple_form.placeholders.course.description'), label: false
+            = f.text_area :description, placeholder: t('simple_form.placeholders.course.description'), label: false, size: 25
           .panel-footer
             = f.submit
