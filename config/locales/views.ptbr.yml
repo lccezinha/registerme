@@ -52,7 +52,7 @@ pt-BR:
     placeholders:
       student:
         name: Informe o nome
-        register_number: Número do registro acadêmico ABC123123
+        register_number: Formato ABC123123
       course:
         name: Nome
         description: Descrição do Curso
