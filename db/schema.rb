@@ -16,14 +16,14 @@ ActiveRecord::Schema.define(version: 20141205130321) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "courses", force: true do |t|
+  create_table "courses", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "memberships", force: true do |t|
+  create_table "memberships", force: :cascade do |t|
     t.integer  "student_id"
     t.integer  "course_id"
     t.datetime "created_at"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20141205130321) do
   add_index "memberships", ["course_id"], name: "index_memberships_on_course_id", using: :btree
   add_index "memberships", ["student_id"], name: "index_memberships_on_student_id", using: :btree
 
-  create_table "students", force: true do |t|
+  create_table "students", force: :cascade do |t|
     t.string   "name"
     t.string   "register_number"
     t.datetime "created_at"
