@@ -4,8 +4,8 @@
       .well
         = simple_form_for @course, { class: 'form-horizontal' } do |f|
           .form-group
-            = f.input :name, placeholder: t('simple_form.placeholders.course.name'), label: false
+            = f.input :name, placeholder: t('simple_form.placeholders.course.name')
           .form-group
-            = f.text_area :description, placeholder: t('simple_form.placeholders.course.description'), label: false, size: 25
+            = f.text_area :description, placeholder: t('simple_form.placeholders.course.description'), size: 25
           .panel-footer
             = f.submit
