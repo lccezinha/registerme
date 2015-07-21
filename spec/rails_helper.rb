@@ -6,6 +6,15 @@ require 'rspec/rails'
 require 'capybara/rspec'
 require 'capybara/rails'
 
+Capybara.current_driver = :selenium
+
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
+end
+
+Capybara.default_wait_time = 10
+Capybara.current_driver = :selenium
+
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
