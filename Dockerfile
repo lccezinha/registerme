@@ -14,6 +14,6 @@ WORKDIR /usr/src/app
 
 COPY . /usr/src/app
 
-EXPOSE 3000
+EXPOSE 3005
 
-CMD ["rails","s","-b","0.0.0.0"]
+CMD ["rails","s","-p","3005","-b","0.0.0.0"]

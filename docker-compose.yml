@@ -10,7 +10,7 @@ services:
       - 'db'
     build: .
     ports:
-      - '3000:3000'
+      - '8080:3005'
     volumes:
       - '.:/usr/src/app'
 volumes:
