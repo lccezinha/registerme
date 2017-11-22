@@ -14,8 +14,7 @@ gem 'slim'
 gem 'simple_form'
 
 group :test do
-  gem 'rspec-rails', '~> 3.0.0'
-  gem 'rspec-mocks'
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
 end
